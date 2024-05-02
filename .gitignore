@@ -1,0 +1,4 @@
+*.out
+*.wasm
+target/
+node_modules/
