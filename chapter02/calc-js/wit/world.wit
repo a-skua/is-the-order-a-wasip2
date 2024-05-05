@@ -1,0 +1,9 @@
+package component:calc@0.1.0;
+
+interface calc {
+    add: func(x: s32, y: s32) -> s32;
+}
+
+world the-calc {
+    export calc;
+}
