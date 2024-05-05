@@ -1,0 +1,15 @@
+[package]
+name = "run"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.component]
+package = "component:run"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"component:calc" = { path = "../calc/wit" }
+
+[dependencies]
+wit-bindgen-rt = { version = "0.24.0", features = ["bitflags"] }

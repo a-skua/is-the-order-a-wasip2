@@ -1,0 +1,3 @@
+interface calc {
+    add: func(x: s32, y: s32) -> s32;
+}

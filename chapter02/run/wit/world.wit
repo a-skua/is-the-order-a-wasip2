@@ -1,0 +1,5 @@
+package component:run@0.1.0;
+
+world root {
+    import component:calc/calc@0.1.0;
+}
