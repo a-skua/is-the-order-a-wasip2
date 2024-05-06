@@ -1,0 +1,23 @@
+[package]
+name = "http"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wit-bindgen-rt = { version = "0.24.0", features = ["bitflags"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "component:http"
+proxy = true
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"wasi:http" = { path = "./wit/wasi/http" }
+"wasi:clocks" = { path = "./wit/wasi/clocks" }
+"wasi:io" = { path = "./wit/wasi/io" }
+"wasi:random" = { path = "./wit/wasi/random" }
+"wasi:cli" = { path = "./wit/wasi/cli" }

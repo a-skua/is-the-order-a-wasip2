@@ -1,0 +1,19 @@
+[package]
+name = "io"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wit-bindgen-rt = { version = "0.24.0", features = ["bitflags"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "component:io"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"wasi:cli" = { path = "./wit/wasi/cli" }
+"wasi:io" = { path = "./wit/wasi/io" }
